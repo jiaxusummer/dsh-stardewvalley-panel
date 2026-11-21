@@ -3,6 +3,10 @@
   "version": "0.1.2",
   "description": "星露谷管家：基于 Darian 的 dsh-stardew-blind-whale-farmer 改的 DSH 插件。保留自动装模组、设置同步、stardew 入口工具和攻略；加一块可视化面板（游戏日/时间/天气/钱/体力/背包/地点/正在干什么、心情曲线、不想玩的参考值），以及开始/叫醒/带存档检查的关闭/查更新/强制回家睡觉/一次性定时开玩；控制台窗口可隐藏或最小化；指定已有的会话去玩；关游戏把数据推给自启会话；攻略两份（作者默认那份只读，我们的经验另记）；玩完把摘要推回主会话。",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiaxusummer/dsh-stardewvalley-panel.git"
+  },
   "author": "Darian (https://github.com/Darianliu23)",
   "contributors": [
     "兮兮与爸爸 — fork 为 dsh-stardewvalley-panel：可视化面板、黑框开关、会话选择、更新按钮、强制三步睡觉、定时开玩、攻略记忆、笔记回主会话"
