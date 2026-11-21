@@ -1,0 +1,22 @@
+# 编译产物
+bin/
+obj/
+node_modules/
+*.user
+.vs/
+.vscode/
+
+# 本机设置（路径等），参考 local.ps1.example
+local.ps1
+
+# release/BlindWhaleFarmer 里的 DLL 由 build.ps1 生成，发版时提交：DSH 插件自带它，自动装进游戏
+
+# 运行时产生的文件
+**/logs/
+*.log
+
+# 打包好的发布文件（上传到 GitHub Releases）
+dist/
+
+# 打包产物（npm 上是发布版，仓库不重复存）
+*.tgz

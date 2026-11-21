@@ -1,0 +1,6 @@
+# dsh-stardewvalley-panel 的 bundle patch。
+# 行 id 必须等于包名（loader 用它 resolve 到本包，也是浏览器半侧的模块 id）。
+# config 是初始默认值；设置页里改过的值由 DSH 的配置系统保存。
+- insert:
+    - id: dsh-stardewvalley-panel
+      name: dsh-stardewvalley-panel

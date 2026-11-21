@@ -1,0 +1,58 @@
+{
+  "name": "dsh-stardewvalley-panel",
+  "version": "0.1.2",
+  "description": "星露谷管家：基于 Darian 的 dsh-stardew-blind-whale-farmer 改的 DSH 插件。保留自动装模组、设置同步、stardew 入口工具和攻略；加一块可视化面板（游戏日/时间/天气/钱/体力/背包/地点/正在干什么、心情曲线、不想玩的参考值），以及开始/叫醒/带存档检查的关闭/查更新/强制回家睡觉/一次性定时开玩；控制台窗口可隐藏或最小化；指定已有的会话去玩；关游戏把数据推给自启会话；攻略两份（作者默认那份只读，我们的经验另记）；玩完把摘要推回主会话。",
+  "license": "MIT",
+  "author": "Darian (https://github.com/Darianliu23)",
+  "contributors": [
+    "兮兮与爸爸 — fork 为 dsh-stardewvalley-panel：可视化面板、黑框开关、会话选择、更新按钮、强制三步睡觉、定时开玩、攻略记忆、笔记回主会话"
+  ],
+  "type": "module",
+  "keywords": [
+    "deepseek-harness",
+    "dsh-plugin",
+    "stardew-valley",
+    "mcp"
+  ],
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./launcher": "./lib/launcher.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build:client": "node tools/build-client.mjs",
+    "test": "node tests/parse.test.mjs && node tests/client.test.mjs && node tests/client-render.test.mjs && node tests/ops.test.mjs"
+  },
+  "files": [
+    "lib",
+    "BlindWhaleFarmer/guide",
+    "release/BlindWhaleFarmer",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "docs/ops.md"
+  ],
+  "dependencies": {
+    "@deepseek-ai/schemastery": "3.18.4"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/schemastery": ">=3.18.1-rc.1 <4.0.0 || >=3.18.2 <4.0.0"
+  },
+  "dsh": {
+    "manifestVersion": 1,
+    "displayName": "星露谷管家",
+    "description": "基于 Darian 的 Blind Whale Farmer 插件：看 AI 玩星露谷（面板/心情曲线/概率），开始、叫醒、存档检查关游戏、查更新、强制回家睡觉、定时开玩。",
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-slots"
+      ]
+    }
+  }
+}
